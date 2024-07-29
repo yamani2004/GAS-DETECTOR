@@ -39,6 +39,14 @@ The provided Arduino sketch performs the following tasks:
    - If the gas level is below the threshold, the system turns off the red LED and buzzer while activating the green LED. The LCD displays a "Gas level is LOW" message.
 
 ## Code
+## Usage
+   - Upload the Code: Connect your Arduino to your computer using a USB cable and upload the code to the Arduino using the Arduino IDE.
+   - Connect Hardware: Ensure all components are connected as described in the hardware requirements section.
+   - Monitor Output: Open the Serial Monitor in the Arduino IDE to view the sensor values and status messages.
+## Troubleshooting
+   - LCD Not Displaying: Check the wiring and ensure that the I2C address is correct. You may need to use an I2C scanner sketch to verify the address.
+   - Components Not Working: Verify that all components are connected properly and that the Arduino is receiving power.
+   - Inconsistent Sensor Readings: Ensure that the gas sensor is properly calibrated and connected.
 
 ```cpp
 #include <LiquidCrystal_I2C.h> // Include the LiquidCrystal_I2C library for I2C LCD control
@@ -114,11 +122,4 @@ void loop() {
     Serial.println("NORMAL"); // Print "NORMAL" to the Serial Monitor
   }
 }
-Usage
-## Upload the Code: Connect your Arduino to your computer using a USB cable and upload the code to the Arduino using the Arduino IDE.
-Connect Hardware: Ensure all components are connected as described in the hardware requirements section.
-Monitor Output: Open the Serial Monitor in the Arduino IDE to view the sensor values and status messages.
-Troubleshooting
-LCD Not Displaying: Check the wiring and ensure that the I2C address is correct. You may need to use an I2C scanner sketch to verify the address.
-Components Not Working: Verify that all components are connected properly and that the Arduino is receiving power.
-Inconsistent Sensor Readings: Ensure that the gas sensor is properly calibrated and connected.
+
