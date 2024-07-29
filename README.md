@@ -48,6 +48,8 @@ The provided Arduino sketch performs the following tasks:
    - Components Not Working: Verify that all components are connected properly and that the Arduino is receiving power.
    - Inconsistent Sensor Readings: Ensure that the gas sensor is properly calibrated and connected.
 
+![gasdetector](https://github.com/user-attachments/assets/7ab29187-b791-4b28-9fc5-e3c15d319285)
+
 ```cpp
 #include <LiquidCrystal_I2C.h> // Include the LiquidCrystal_I2C library for I2C LCD control
 
@@ -117,7 +119,6 @@ void loop() {
     lcd.print(val); // Print the sensor value
     lcd.setCursor(0, 1);
     lcd.print("Gas level is LOW");
-
     delay(300); // Wait for 300 milliseconds
     Serial.println("NORMAL"); // Print "NORMAL" to the Serial Monitor
   }
